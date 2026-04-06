@@ -142,9 +142,15 @@ body {
     color: var(--accent-blue);
     text-decoration: underline;
 }
-
 footer {
-    background-color: #212529; /* Gris foncé Bootstrap */
+    background-color: #212529; /* Rappel de la navbar bg-dark */
+    margin-top: 3rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.9rem;
+    margin-bottom: 0;
 }
 /* --- Style de la carte Profil --- */
 .profil-card {
