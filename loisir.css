@@ -1,0 +1,108 @@
+/* --- Style du conteneur de la page Loisirs --- */
+.glass-container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.navbar {
+    padding: 15px 0;
+    transition: all 0.3s;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* Effet au survol et page active */
+.nav-link:hover, 
+.nav-link.active {
+    color: #0dcaf0 !important; /* Couleur cyan pour ressortir sur le noir */
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: #0dcaf0;
+}
+
+
+/* Force la barre noire à couvrir toute la largeur */
+.custom-table thead th {
+    background-color: #212529 !important;
+    color: white;
+    padding: 15px;
+    text-align: left; /* Aligne le titre sur le texte */
+    border: none;
+}
+
+/* Aligne les textes des activités à gauche */
+.custom-table td {
+    padding: 15px;
+    text-align: left !important; /* Force l'alignement à gauche */
+    vertical-align: middle;
+}
+
+/* Fixe les largeurs pour éviter que les colonnes ne bougent */
+.custom-table th:nth-child(1) { width: 120px; } /* Colonne image */
+.custom-table th:nth-child(2) { width: 200px; } /* Colonne catégorie */
+/* Force la largeur du tableau à 100% */
+
+.glass-container {
+    max-width: 1000px; /* Largeur maximale conseillée */
+    margin: 0 auto;    /* Centre le bloc horizontalement */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Centrer le titre et le texte de bas de page */
+h1, .italic {
+    text-align: center;
+}
+.italic {
+    font-style: italic;
+}
+
+/* --- Style des images dans le tableau Loisirs --- */
+.img-passion {
+    width: 150px;          /* Largeur fixe */
+    height: 100px;          /* Hauteur fixe */
+    object-fit: cover;     /* Force l'image à remplir le cadre sans se déformer */
+    border-radius: 12px;   /* Bords arrondis modernes */
+    border: 2px solid #fff;/* Petit bord blanc pour le détacher */
+    transition: transform 0.3s ease; /* Animation douce au survol */
+}
+
+.img-passion:hover {
+    transform: scale(1.1); /* Zoom léger quand on passe la souris */
+}
+
+/* Centre le contenu des cellules verticalement */
+.custom-table td {
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #212529; /* Rappel de la navbar bg-dark */
+    margin-top: 3rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}

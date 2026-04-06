@@ -1,0 +1,204 @@
+/* --- Variables de design --- */
+:root {
+    --primary-blue: #002d5b;    /* Ton bleu marine d'origine */
+    --accent-blue: #00d4ff;     /* Cyan pour le côté tech */
+    --neon-purple: #9461fd;     /* Violet pour les dégradés */
+    --gold: #ffcc00;            /* Jaune vif pour la visibilité */
+    --glass: rgba(255, 255, 255, 0.1);
+    --dark-bg: #050a18;
+}
+
+/* --- Base & Typographie --- */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.nav-link:hover, 
+.nav-link.active {
+    color: #0dcaf0 !important; /* Couleur cyan pour ressortir sur le noir */
+}
+
+/* --- Barre de Navigation (Gardée du style original) --- */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* --- Hero Section (Style Glassmorphism) --- */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Dégradé sombre pour faire ressortir le texte */
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(5,10,24,0.8) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: var(--glass);
+    backdrop-filter: blur(15px); /* L'effet de flou "verre" */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* --- Photo de profil --- */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--accent-blue);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Textes spécifiques sur Image --- */
+.text-gold {
+    color: var(--gold) !important;
+    font-weight: 600;
+}
+
+.text-light-gray {
+    color: #d1d1d1 !important;
+}
+
+/* --- Badges & Compétences (Nouveau Style) --- */
+.badge-tech {
+    background: linear-gradient(45deg, var(--accent-blue), var(--neon-purple));
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
+    border: none;
+    font-size: 18px;
+}
+
+/* --- Cartes du bas (Originales) --- */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+/* --- Boutons --- */
+.btn-gold {
+    background-color: var(--gold);
+    color: #050a18;
+    border: none;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #ffdb4d;
+    transform: translateY(-2px);
+}
+
+/* --- LinkedIn & Pied de page --- */
+.linkedin-link {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.linkedin-link:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #212529; /* Gris foncé Bootstrap */
+}
+/* --- Style de la carte Profil --- */
+.profil-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    border-left: 8px solid var(--accent-blue); /* Barre de couleur sur le côté */
+    box-shadow: 0 15px 35px rgba(0, 45, 91, 0.1); /* Ombre douce bleutée */
+    transition: 0.3s;
+}
+
+.profil-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Agrandissement du texte --- */
+.description-text {
+    font-size: 1.25rem; /* Texte plus grand (environ 20px) */
+    line-height: 1.8;   /* Plus d'espace entre les lignes pour la lecture */
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.text-accent {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* --- Badges plus grands et plus "tech" --- */
+.badge-tech-large {
+    background: linear-gradient(135deg, var(--accent-blue), var(--neon-purple));
+    color: white;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+    border: none;
+    transition: 0.3s;
+}
+
+.badge-tech-large:hover {
+    filter: brightness(1.1);
+    cursor: default;
+}
+
+/* Optionnel : Fond de section légèrement coloré pour faire ressortir la carte blanche */
+main {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+p{
+    font-size: 25px;
+}
+
+main ul{
+    font-size: 30px;
+}
